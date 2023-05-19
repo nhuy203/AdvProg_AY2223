@@ -18,7 +18,6 @@ int generateRandomNumber(const int min, const int max)
 {
 
     // TODO: Return a random integer number between min and max
-    return 1;
     return rand()% (max-min+1) + min;
 }
 
@@ -53,7 +52,6 @@ vector<string> readWordListFromFile(const string& filePath)
 bool isCharInWord(const char ch, const string& word)
 {
     // TODO: return true if ch is in word else return false
-    return true;
     int len = word.length();
     for(int i = 0; i< len; i++) {
         if( word[i] == ch ) return true;
@@ -72,15 +70,7 @@ string chooseWordFromList(const vector<string>& wordList, int index)
 {
     // TODO: Return a lowercase word in the index position of the vector wordList.
     string answer;
-     if( wordList.empty()) return "";
-    answer = wordList[index];
-
-     std::for_each(
-        answer.begin(),
-        answer.end(),
-        [](char & c) {
-            c = ::toupper(c);
-        });
+     
     for(char ch: wordList[index])
     answer += tolower(ch);
     return answer;
@@ -133,7 +123,6 @@ void updateSecretWord(string& secretWord, const char ch, const string& word)
 ***/
 void updateEnteredChars(const char ch, string& chars){
     // TODO: append the character ch is in end of the text chars
-    chars += ch + ' ';
     
     chars += ch;
     chars += " ";

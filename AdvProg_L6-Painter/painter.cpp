@@ -9,9 +9,7 @@
 void Painter::setColor(SDL_Color color) 
 { 
     // TODO: set the color value for the Painter and set Render Draw Color
-    this.color = color;
-    SDL_setRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
-    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+     jumpForward(-numPixel);
 }
 
 
@@ -54,7 +52,6 @@ void Painter::turnLeft(double degree)
     // TODO: rotate left the painter 
     angle += degree;
     if(angle >360) angle -= 360;  
-    if(angle >=360) angle -= 360;
 }
 
 
@@ -79,7 +76,6 @@ void Painter::turnRight(double degree)
 void Painter::randomColor()
 {
     // TODO: set random color    
-    SDL_Color rnd = {rand()% 256, rand()% 256, rand()% 256};
     SDL_Color rnd = {rand() % 256, rand() % 256, rand() % 256};
     setColor(rnd);
 }
