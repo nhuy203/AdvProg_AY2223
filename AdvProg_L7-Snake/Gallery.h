@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <string>
-#include <SDL_image.h>
 
 
 #if defined(_WIN64) || defined(_WIN32)
